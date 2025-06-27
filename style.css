@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ecfcff;
+    font-family: "Roboto Slab", serif;
+}
+
+/* nav {
+    background: linear-gradient(#088395, #071952);
+    color: #FFFBDE;
+    height: 72px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    font-size: 30px;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(#088395, #071952);
+    color: #FFFBDE;
+    height: 72px;
+}
+
+/* Left side (title) */
+.nav-left {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Right side (mode selector) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-right label {
+    font-size: 1.5em;
+    color: #FFFBDE;
+}
+
+#mode {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.95em;
+    background-color: #b2dfeb;
+    color: rgb(14, 10, 68);
+    cursor: pointer;
+}
+
+#mode:hover {
+    background-color: #151d3f;
+     color: #FFFBDE;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: "Roboto Slab", serif;
+    position: relative;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A53860;
+    position: relative;
+}
+
+.box:hover {
+    background-color: #c0f7eb;
+}
+
+.gameInfo h1 {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    background: linear-gradient(to bottom, #ffa4c7, #088395, #071952);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.info {
+    margin: 20px 20px 0 15px;
+    background: linear-gradient(to bottom, #ffa4c7, #088395, #071952);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    cursor: pointer;
+    margin: 12px 20px 0 20px;
+    background-color: #088395;
+    color: #FFF8E6;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+}
+
+#reset:hover {
+    background-color: #192f38;
+}
+
+.line {
+    background-color: #bb799d;
+    width: 0;
+    height: 8px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    margin-left: 35px;
+}
+
+/* .mode-selector {
+    margin: 15px 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #088395;
+}
+
+.mode-selector label {
+    margin-right: 10px;
+}
+
+.mode-selector select {
+    background-color: #077A7D;
+    color: #F5EEDD;
+    border: 2px solid #06202B;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mode-selector select:hover {
+    background-color: #15333f;
+}
+
+.mode-selector select:focus {
+    box-shadow: 0 0 5px #077A7D;
+} */
+
+/* @keyframes glowWin {
+  0% { color: rgb(26, 143, 133); transform: scale(1); }
+  50% { color: rgb(245, 124, 194); transform: scale(1.2); }
+  100% { color: rgb(15, 37, 97); transform: scale(1); }
+}
+
+@keyframes glowDraw {
+  0% { color: rgb(26, 143, 133); transform: scale(1); }
+  50% { color: rgb(245, 124, 194); transform: scale(1.2); }
+  100% { color: rgb(15, 37, 97); transform: scale(1); }
+} */
+
+.win-effect {
+    /* animation: glowWin 1s ease-in-out; */
+    font-size: 2.2rem;
+}
+
+.draw-effect {
+    /* animation: glowDraw 1s ease-in-out; */
+    font-size: 2.2rem;
+}
+
+@media screen and (max-width:900px) {
+    .game {
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 35px;
+    }
+
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 16vw);
+        grid-template-columns: repeat(3, 16vw);
+    }
+
+    .line {
+        display: none;
+    }
+
+    .win-effect {
+        /* animation: glowWin 1s ease-in-out; */
+        font-size: 1.6rem;
+    }
+
+    .draw-effect {
+        /* animation: glowDraw 1s ease-in-out; */
+        font-size: 1.6rem;
+    }
+
+    .xo-img {
+        width: 60%;
+        max-width: 60px;
+    }
+
+}
